@@ -16,11 +16,13 @@ struct RecipeDetalView: View {
             Image(recipe.image)
                 .resizable()
                 .scaledToFill()
+            
             VStack (alignment: .leading) {
                 Text("Ingredients")
-                    .font(.headline)               
-                ForEach(recipe.ingredients, id: \.self) { i in
-                    Text("•  " + i)
+                    .font(.headline)
+                
+                ForEach(recipe.ingredients) { i in
+                    Text("•  " + i.name)
                         .padding(1.0)
                 }
                 Text("Directions").font(.headline).padding(.top)
