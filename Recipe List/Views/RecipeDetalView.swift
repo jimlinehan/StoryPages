@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeDetalView: View {
     
+    @EnvironmentObject var model:RecipeModel
     var recipe:Recipe
     
     var body: some View {

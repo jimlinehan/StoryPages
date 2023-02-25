@@ -13,7 +13,7 @@ struct RecipeTabView: View {
 
         TabView (selection: $tagIndex) {
                  
-                 Text("Feature View")
+                 RecipesFeaturedView()
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Featured")
@@ -23,7 +23,7 @@ struct RecipeTabView: View {
                     Image(systemName: "list.bullet.below.rectangle")
                     Text("Recipes")
                 }
-        }
+        }.environmentObject(RecipeModel())
         
     }
 }
